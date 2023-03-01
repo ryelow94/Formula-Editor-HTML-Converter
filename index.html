@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div style="background-color: #252525;" >
+    <h1 style="font-size: 4rem; color: #EF700C; text-align: center; padding:5%; margin-left:1%; margin-right:1%;">HTML to C# Formula Engine Helper</h1>
+</div>
+    <div id="form-div" class="container">
+        <h4 style="color:#356F6F; text-align: left; padding:0%; ">Use this form to convert an HTML document into a C# string.</h4>
+        <h4 style="color:#356F6F; text-align: left; padding:0%; ">Then, paste the result into the formula engine of a NAVEX IRM text field to render the HTML in a record.</h4>
+        <h4 style="color:#356F6F; text-align: left; padding:0%; ">The field must have a max character limit greater than the amount of characters in the C# string.</h4>
+        <form id="form" >
+            <label id="headerLabel" for="row">Alias Name of Field</label>
+        <input
+          type="text"
+          id="alias"
+          name="row"
+          placeholder="Alias must include underscore if not a system field. For example: _alias"
+        />
+       
+      
+          <label for="subject">HTML</label>
+          <textarea id="subject" name="subject" placeholder="Paste HTML Code Here" style="height:200px"></textarea>
+      
+          <input id="submit" type="submit" value="Submit">
+      
+        </form>
+      </div>
+</body>
+<script src="script.js"></script>
+</html>
