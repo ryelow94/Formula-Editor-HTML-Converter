@@ -3,14 +3,20 @@
 var formDiv = document.getElementById("form-div")
 var form = document.getElementById("form");
 formDiv.addEventListener("submit", handleSubmit);
+var clearedForm = document.getElementById("clearForm")
+function clearForm(){
+    clearedForm.style="display:none"
+    form.reset()
+}
+clearedForm.addEventListener("click", clearForm)
 function handleSubmit(event){
 event.preventDefault();
-if(event.target[0].value===""||null){
+if(event.target[0].value===""){
     alert("Text area cannot be empty")
     return;
 }
+clearedForm.style="display:visible"
 var copyToClipBoard = document.createElement("button");
-var Submit = document.getElementById("submit")
   form.after(copyToClipBoard);
   copyToClipBoard.textContent = "Show C# and Copy HTML to Clipboard";
   copyToClipBoard.setAttribute("id", "copy");
@@ -41,6 +47,7 @@ var Submit = document.getElementById("submit")
     cSharpedP.innerText = `String self = record.GetValue<String>("${event.target[0].value}");` + `\n` + `self = "";`+ `\n`+ cSharpString + `\n` + `return self;`
     navigator.clipboard.writeText(cSharpedP.innerText);
     localStorage.setItem("savedItem", cSharpString.innerText);
+    var removeClip= document.createElement("button");
     var removeClip= document.createElement("button");
 
     removeClip.setAttribute("id", "copy")
