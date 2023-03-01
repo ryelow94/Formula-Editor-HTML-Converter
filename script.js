@@ -55,7 +55,7 @@ function clearForm(){
    ;
 
     removeClip.setAttribute("id", "copy")
-    removeClip.textContent="Clear"
+    removeClip.textContent="Clear C# String"
     form.after(removeClip)
     copyToClipBoard.remove()
     removeClip.onclick=()=>{
