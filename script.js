@@ -3,20 +3,24 @@
 var formDiv = document.getElementById("form-div")
 var form = document.getElementById("form");
 formDiv.addEventListener("submit", handleSubmit);
-var clearedForm = document.getElementById("clearForm")
-function clearForm(){
-    clearedForm.style="display:none"
-    form.reset()
-}
-clearedForm.addEventListener("click", clearForm)
+
+
 function handleSubmit(event){
 event.preventDefault();
 if(event.target[0].value===""){
     alert("Text area cannot be empty")
     return;
 }
-clearedForm.style="display:visible"
+
 var copyToClipBoard = document.createElement("button");
+var clearedForm = document.getElementById("clearForm")
+clearedForm.style="display:visible"
+clearedForm.addEventListener("click", clearForm)
+function clearForm(){
+    copyToClipBoard.remove()
+    clearedForm.style="display:none"
+    form.reset()
+}
   form.after(copyToClipBoard);
   copyToClipBoard.textContent = "Show C# and Copy HTML to Clipboard";
   copyToClipBoard.setAttribute("id", "copy");
@@ -48,7 +52,7 @@ var copyToClipBoard = document.createElement("button");
     navigator.clipboard.writeText(cSharpedP.innerText);
     localStorage.setItem("savedItem", cSharpString.innerText);
     var removeClip= document.createElement("button");
-    var removeClip= document.createElement("button");
+   ;
 
     removeClip.setAttribute("id", "copy")
     removeClip.textContent="Clear"
@@ -57,6 +61,7 @@ var copyToClipBoard = document.createElement("button");
     removeClip.onclick=()=>{
         cSharped.style="display:none"
         removeClip.remove()
+        
     }
   };
 }
