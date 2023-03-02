@@ -1,0 +1,6 @@
+String self = record.GetValue<String>("sdf");
+self = "";
+self += "fs";
+self += "";
+
+return self;
