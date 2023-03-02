@@ -314,21 +314,124 @@ var cancelled = `<table role="presentation" id="emailNotification" style="margin
   </td>
 </tr>
 </tbody></table>`
+var dataTable = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .l-inner {
+	max-width: 1104px;
+	padding-right: 40px;
+	padding-left: 40px;
+	margin-inline: auto;
+}
 
-templates.push(vendorAssessment, cancelled)
+table {
+	max-width: 900px;
+	width: 100%;
+/* 	線の重なりを指定する：collapse	各セルの線を重ねて表示 */
+	border-collapse: collapse;
+	border: 1px solid #DAE3F2;
+	margin-top: 30px;
+}
+
+th {
+	display: block;
+	background-color: #DAE3F2;
+	padding: 17px 20px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid #FFF;
+}
+@media screen and (min-width: 768px) {
+	th,td {
+		display: table-cell
+	}
+	th {
+		width: 230px;
+	}
+}
+
+td {
+	display: block;
+	background-color: #FFF;
+	padding: 17px 20px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid #DAE3F2;
+}
+
+td iframe {
+	max-width: 400px;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 400/300;
+}
+
+/* 最後のth,tdの下線不要 */
+tr:last-of-type th {
+	border-bottom: none;
+}
+
+tr:last-of-type td {
+	border-bottom: none;
+}
+</style>
+</html>
+
+<body>
+	<div class="l-inner">
+		<table>
+			<tr>
+				<th>Header</th>
+				<td>Value</td>
+			</tr>
+			<tr>
+				<th>Header2</th>
+				<td>Value</td>
+			</tr>
+			<tr>
+				<th>Header3</th>
+				<td class="p-table__access-data">
+					<p>Value</p>
+					<p>Value</p>
+				</td>
+			</tr>
+			<tr>
+				<th>Header4</th>
+				<td>Value</td>
+			</tr>
+			
+		</table>
+	</div>
+</body> 
+</html>`
+
+templates.push(vendorAssessment, cancelled, dataTable)
 
 function copyTemplate (){
     if(place.innerHTML === locations[0]){
-      navigator.clipboard.writeText(templates[0])
+      
       display=templates[0]
     }
     if(place.innerHTML === locations[1]){
-      navigator.clipboard.writeText(templates[1])
+     
       display=templates[1]
     }
     if(place.innerHTML === locations[2]){
-      navigator.clipboard.writeText(templates[2])
+      
       display = templates[2]
+      console.log("2")
     }
     
     handleSubmit2()
@@ -365,7 +468,7 @@ function handleSubmit2(){
         const element = cSharpArray[i];
         cSharpString += `self += ` + `"${element}` + `"; \n`
       }
-        
+     
         var cSharped = document.createElement("div")
         cSharped.style=" display: flex;flex-direction: column; margin-top: 5%; margin-left: 5%;margin-right: 5%;justify-content: center;box-shadow: 0 0 20px 0  #3c3737; background-color: white;margin-bottom: 5%;border-radius: 6px;"
         var cSharpedP = document.createElement("p")
@@ -373,6 +476,7 @@ function handleSubmit2(){
         cSharpedP.innerText = `String self = record.GetValue<String>("_alias");` + `\n` + `self = "";`+ `\n`+ cSharpString + `\n` + `return self;`
         formDiv.after(cSharped)
         cSharped.appendChild(cSharpedP)
+        navigator.clipboard.writeText(cSharpedP.innerText);
     
         console.log(display)
         var removeClip= document.createElement("button");

@@ -113,8 +113,11 @@ function clearForm(){
   form.after(copyToClipBoard);
   copyToClipBoard.textContent = "Show C# and Copy HTML to Clipboard";
   copyToClipBoard.setAttribute("id", "copy");
+  console.log(contents)
   let string = (event.target[2].value.replace(/"/g, "'"))
-  if(contents!=""){string = contents}
+  if(contents!=""){
+    string = contents.replace(/"/g, "'")
+  }
     var stringy = string.replace(/(\r\n|\n|\r)/gm, " ")
     var newString = Array.from(stringy)
     let stringArr = []
