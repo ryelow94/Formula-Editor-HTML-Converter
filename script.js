@@ -10,7 +10,7 @@ var pasteLabel = document.getElementById("pasteLabel")
 // copyCard.addEventListener(click)
 
 var index = 0; 
-var locations = ["Click to Copy 1", "Click to Copy 2", "Click to Copy 3"]
+var locations = ["---- Click to Copy 1 ----", "---- Click to Copy 2 ----", "---- Click to Copy 3 ----", "---- Click to copy 4 ----", "---- Click to Copy 5 ----", "---- Click to Copy 6 ----", "---- Click to copy 7 ----"]
 
 var slides = document.getElementsByClassName("slides"); 
 var nextArrow = document.getElementById("next");
@@ -92,7 +92,15 @@ formDiv.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event){
 event.preventDefault();
-
+if(document.getElementById("copyCsharp")){
+  document.getElementById("copyCsharp").style="display:none"
+}
+if(document.getElementById("cSharped")){
+  document.getElementById("cSharped").remove()
+}
+if(document.getElementById("copy1")){
+  document.getElementById("copy1").remove()
+}
 if(event.target[0].value===""){
     alert("Text area cannot be empty")
     return;
