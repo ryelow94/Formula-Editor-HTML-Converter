@@ -1,4 +1,4 @@
-let templates = [] 
+let templates = []
 var place = document.getElementById("place");
 var form = document.getElementById("form")
 var locations = ["---- Click to Copy 1 ----", "---- Click to Copy 2 ----", "---- Click to Copy 3 ----", "---- Click to copy 4 ----", "---- Click to Copy 5 ----", "---- Click to Copy 6 ----", "---- Click to copy 7 ----"]
@@ -1062,7 +1062,7 @@ tr.data td:last-of-type {
     </main>
   </body>
 </html>
-` 
+`
 var basicEmail = `
 <body bgcolor="#f5f5f5" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" offset="0" style="padding:70px 0 70px 0;">
     <table width="600" height="auto" align="center" cellpadding="0" cellspacing="0" style="background-color:#fdfdfd; border:1px solid #dcdcdc; border-radius:3px !important;">
@@ -1098,151 +1098,173 @@ templates.push(vendorAssessment, cancelled, dataTable, dataTableTwo, dataTableTh
 
 var copyHTML = document.getElementById("copyHTML")
 var copyCsharp = document.getElementById("copyCsharp")
+// var iframe = document.getElementById("iframe")
+// var htmlCode = document.getElementById("htmlCode")
 
-function copyTemplate (){
-  if(document.getElementById("copied")){
+
+
+// function showCode() {
+//   if (htmlCode != "" || null) {
+//     iframe.style = "display:visible"
+//   }
+// }
+// htmlCode.addEventListener("change", showCode)
+
+function copyTemplate() {
+  if (document.getElementById("copied")) {
     document.getElementById("copied").remove()
   }
-  copyHTML.style="display:visible"
+  copyHTML.style = "display:visible"
   var copied = document.createElement("p")
-  copied.setAttribute("id","copied")
-  copied.style="color:green"
-    copied.textContent="--- C# String copied ---"
-    copyHTML.before(copied)
-    if(document.getElementById("copied1")){
-      document.getElementById("copied1").remove()
-    }
-    if(place.innerHTML === locations[0]){
-      
-      display=templates[0]
-    }
-    if(place.innerHTML === locations[1]){
-     
-      display=templates[1]
-    }
-    if(place.innerHTML === locations[2]){
-      
-      display = templates[2]
-    } 
-    if(place.innerHTML === locations[3]){
-      
-        display = templates[3]
-      } 
-      if(place.innerHTML === locations[4]){
-        display = templates[4]
-    
-      }
-      if(place.innerHTML === locations[5]){
-        display = templates[5]
-      
-      } 
-      if(place.innerHTML === locations[6]){
-        display = templates[6]
+  copied.setAttribute("id", "copied")
+  copied.style = "color:green"
+  copied.textContent = "--- C# String copied ---"
+  copyHTML.before(copied)
+  if (document.getElementById("copied1")) {
+    document.getElementById("copied1").remove()
+  }
+  if (place.innerHTML === locations[0]) {
 
-      }
-    
-    handleSubmit2()
-    
-    form.style="display:none"
+    display = templates[0]
+  }
+  if (place.innerHTML === locations[1]) {
+
+    display = templates[1]
+  }
+  if (place.innerHTML === locations[2]) {
+
+    display = templates[2]
+  }
+  if (place.innerHTML === locations[3]) {
+
+    display = templates[3]
+  }
+  if (place.innerHTML === locations[4]) {
+    display = templates[4]
+
+  }
+  if (place.innerHTML === locations[5]) {
+    display = templates[5]
+
+  }
+  if (place.innerHTML === locations[6]) {
+    display = templates[6]
+
+  }
+
+  handleSubmit2()
+
+  form.style = "display:none"
 }
 
 copyHTML.onclick = async () => {
-    await navigator.clipboard.writeText(display)
-    document.getElementById("copied").style="display:none"
-    var copied1 = document.createElement("p")
-    copied1.setAttribute("id", "copied1")
-    copied1.innerText="--- HTML copied ---\nYou can make changes to the HTML and paste the code back into the text area below to reconvert it to a C# string"
-    copied1.style="color:green; text-align:center"
-    form.before(copied1)
-    copyHTML.style="display:none"
-    copyCsharp.style="display:visible"
-    form.style="display:visible"
-    form.before(copyCsharp)
-} 
-copyCsharp.onclick =  () => {
-  if(document.getElementById("copied")){
-  document.getElementById("copied").style="display:visible; color:green"
+  await navigator.clipboard.writeText(display)
+  document.getElementById("copied").style = "display:none"
+  var copied1 = document.createElement("p")
+  copied1.setAttribute("id", "copied1")
+  copied1.innerText = "--- HTML copied ---\nYou can make changes to the HTML and paste the code back into the text area below to reconvert it to a C# string"
+  copied1.style = "color:green; text-align:center"
+  form.before(copied1)
+  copyHTML.style = "display:none"
+  copyCsharp.style = "display:visible"
+  form.style = "display:visible"
+  form.before(copyCsharp)
+  // document.getElementById("editor").style = "display:visible; height:450px"
+  // document.getElementById("iframe").style = " height: 450px"
+  // form.before(document.getElementById("editor"))
+  // form.before(document.getElementById("iframe"))
+  if (document.getElementById("copy1")) {
+    document.getElementById("copy1").remove();
   }
- if(document.getElementById("copy1")){
-  document.getElementById("copy1").remove()
-  form.style="display:none"
- }
- if(document.getElementById("copied1")){
-  document.getElementById("copied1").remove()
- }
- form.style="display:none"
- handleSubmit2()
-  copyHTML.style="display:visible"
-  copyCsharp.style="display:none"
+  if (document.getElementById("cSharped")) {
+    document.getElementById("cSharped").style = "display:none"
+  }
+}
+copyCsharp.onclick = () => {
+  if (document.getElementById("copied")) {
+    document.getElementById("copied").style = "display:visible; color:green"
+  }
+  if (document.getElementById("copy1")) {
+    document.getElementById("copy1").remove()
+    form.style = "display:none"
+  }
+  if (document.getElementById("copied1")) {
+    document.getElementById("copied1").remove()
+  }
+  form.style = "display:none"
+  handleSubmit2()
+  copyHTML.style = "display:visible"
+  copyCsharp.style = "display:none"
 }
 
-place.addEventListener("click", copyTemplate) 
-function handleSubmit2(){
-  if(document.getElementById("cSharped")){
+place.addEventListener("click", copyTemplate)
+function handleSubmit2() {
+  if (document.getElementById("cSharped")) {
     document.getElementById("cSharped").remove()
   }
-  if(document.getElementById("copy1")){
+  if (document.getElementById("copy1")) {
     document.getElementById("copy1").remove()
   }
-    place.removeEventListener("click", copyTemplate)
-    place.style="display:none"
-    var clearedForm = document.getElementById("clearForm")
-    clearedForm.style="display:visible"
-    clearedForm.addEventListener("click", clearForm)
-    function clearForm(){
-        copyToClipBoard.remove()
-        clearedForm.style="display:none"
-        pasteLabel.style="display:visible"
-        textArea.style="display:visible"
-        
-        form.reset()
-    } 
-    let string = (display.replace(/"/g, "'"))
-    var stringy = string.replace(/(\r\n|\n|\r)/gm, " ")
-    var newString = Array.from(stringy)
-    let stringArr = []
-    for (let i = 0; i < newString.length; i++) {
-      const element = newString[i];
-      stringArr.push(element)
-    }
-    var cSharpArray = stringArr.join("").match(/.{0,10}/g) || []
-    let cSharpString = "" 
-    for (let i = 0; i < cSharpArray.length; i++) {
-        const element = cSharpArray[i];
-        cSharpString += `self += ` + `"${element}` + `"; \n`
-      }
-     
-        var cSharped = document.createElement("div")
-        cSharped.setAttribute("id","cSharped")
-        cSharped.style=" display: flex;flex-direction: column; margin-top: 5%; margin-left: 5%;margin-right: 5%;justify-content: center;box-shadow: 0 0 20px 0  #3c3737; background-color: white;margin-bottom: 5%;border-radius: 6px;"
-        var cSharpedP = document.createElement("p")
-        cSharpedP.style="word-break: break-all; text-align: center; font-size: 18px; color:#356F6F; width:100%"
-        cSharpedP.innerText = `String self = record.GetValue<String>("_alias");` + `\n` + `self = "";`+ `\n`+ cSharpString + `\n` + `return self;`
-        formDiv.after(cSharped)
-        cSharped.appendChild(cSharpedP)
-        navigator.clipboard.writeText(cSharpedP.innerText);
+  place.removeEventListener("click", copyTemplate)
+  place.style = "display:none"
+  var clearedForm = document.getElementById("clearForm")
+  clearedForm.style = "display:visible"
+  clearedForm.addEventListener("click", clearForm)
+  function clearForm() {
+    // copyToClipBoard.remove()
+    clearedForm.style = "display:none"
+    pasteLabel.style = "display:visible"
+    // textArea.style = "display:visible"
     
-        console.log(display)
-        var removeClip= document.createElement("button");
-       
-    
-        removeClip.setAttribute("id", "copy1")
-        removeClip.textContent="Clear C# String"
-        copyHTML.after(removeClip)
-        removeClip.onclick=()=>{
-          if(document.getElementById("copied")){
-            document.getElementById("copied").remove()
-          }
-            cSharped.style="display:none"
-            removeClip.remove()
-            form.style="display:visible"
-            place.addEventListener("click", copyTemplate)
-            place.style="display:visible"
-            copyCsharp.style="display:none"
-            copyHTML.style="display:none"
-            
-        }
+    form.reset()
+
+  }
+  let string = (display.replace(/"/g, "'"))
+  var stringy = string.replace(/(\r\n|\n|\r)/gm, " ")
+  var newString = Array.from(stringy)
+  let stringArr = []
+  for (let i = 0; i < newString.length; i++) {
+    const element = newString[i];
+    stringArr.push(element)
+  }
+  var cSharpArray = stringArr.join("").match(/.{0,10}/g) || []
+  let cSharpString = ""
+  for (let i = 0; i < cSharpArray.length; i++) {
+    const element = cSharpArray[i];
+    cSharpString += `self += ` + `"${element}` + `"; \n`
+  }
+
+  var cSharped = document.createElement("div")
+  cSharped.setAttribute("id", "cSharped")
+  cSharped.style = " display: flex;flex-direction: column; margin-top: 5%; margin-left: 5%;margin-right: 5%;justify-content: center;box-shadow: 0 0 20px 0  #3c3737; background-color: white;margin-bottom: 5%;border-radius: 6px;"
+  var cSharpedP = document.createElement("p")
+  cSharpedP.style = "word-break: break-all; text-align: center; font-size: 18px; color:#356F6F; width:100%"
+  cSharpedP.innerText = `String self = record.GetValue<String>("_alias");` + `\n` + `self = "";` + `\n` + cSharpString + `\n` + `return self;`
+  formDiv.after(cSharped)
+  cSharped.appendChild(cSharpedP)
+  navigator.clipboard.writeText(cSharpedP.innerText);
+
+  console.log(display)
+  var removeClip = document.createElement("button");
+
+
+  removeClip.setAttribute("id", "copy1")
+  removeClip.textContent = "Clear C# String"
+  copyHTML.after(removeClip)
+  removeClip.onclick = () => {
+    if (document.getElementById("copied")) {
+      document.getElementById("copied").remove()
     }
+    cSharped.style = "display:none"
+    removeClip.remove()
+    form.style = "display:visible"
+    place.addEventListener("click", copyTemplate)
+    place.style = "display:visible"
+    copyCsharp.style = "display:none"
+    copyHTML.style = "display:none"
+
+  }
+}
 
 
 

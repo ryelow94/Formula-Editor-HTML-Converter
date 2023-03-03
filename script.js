@@ -77,6 +77,7 @@ function readSingleFile(evt) {
             // document.getElementById("ReadResult").innerHTML = contents;
             textArea.style="display:none"
             pasteLabel.style="display:none"
+            navigator.clipboard.writeText(contents)
             
         }
         r.readAsText(f);
@@ -114,9 +115,9 @@ function clearForm(){
     copyToClipBoard.remove()
     clearedForm.style="display:none"
     pasteLabel.style="display:visible"
-    textArea.style="display:visible"
-    
+    // textArea.style="display:visible"
     form.reset()
+    
 }
   form.after(copyToClipBoard);
   copyToClipBoard.textContent = "Show C# and Copy HTML to Clipboard";
@@ -166,3 +167,23 @@ function clearForm(){
     }
   };
 }
+var j=0;
+//Function for live Rendering
+// function update(i) {
+//     if(i==0){
+//     let htmlCode=document.getElementById("htmlCode").value;
+//     let text=htmlCode;
+//     let iframe=document.getElementById('viewer').contentWindow.document;
+//     iframe.open();
+//     iframe.write(text);
+//     iframe.close();
+//     }
+
+//     else if(i==1){
+
+//         let htmlCode=document.getElementById("htmlCode").value;
+//         let html=htmlCode.slice(0,htmlCode.length);
+//         document.getElementById("htmlCode").value=html;
+//         j=1;
+
+//     }}

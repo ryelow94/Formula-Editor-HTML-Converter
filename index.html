@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.ckeditor.com/4.4.5.1/full/ckeditor.js"></script>
 </head>
 <body>
     <div style="background-color: #252525; border-radius:1%;" >
-    <h1 style="font-size: 4rem; color: #EF700C; text-align: center; padding:5%; margin-left:1%; margin-right:1%;">HTML to C# </h1>
+    <h1 style="font-size: 4rem; color: #EF700C; text-align: center; padding:1%; margin-left:1%; margin-right:1%;">HTML Code Editor and C# Converter </h1>
 </div>
 
     <div id="form-div" class="container">
-        <h3 style="color:#356F6F; text-align: center; padding:0%; font-weight: 900; ">Use this form to convert an HTML document into a C# string.</h3>
+        <h3 style="color:#356F6F; text-align: center; padding:0%; font-weight: 900; ">Use this form to edit and convert an HTML document into a C# string.</h3>
         <h3 style="color:#356F6F; text-align: center; padding:0%; font-weight: 900;">Paste the result into the formula engine of a NAVEX IRM text field to render the HTML in a record.</h3>
         <h3 style="color:#356F6F; text-align: center; padding:0%; font-weight: 900;">The field must have a max character limit greater than or equal to the amount of characters in the output of this form.</h3> 
         <div id="window">
@@ -56,10 +57,9 @@
             </div>
             <p style="text-align: center;color:#356F6F">--- Select a template ---</p>
          <p style="text-align: center; color:#356F6F">--- Or use the form below to upload HTML files/paste HTML code ---</p>
-            
-           
         </div>
-        <form id="form" >
+        <br/>
+        <form style="margin-top:10px;" id="form" >
             <label id="headerLabel" for="row">Alias Name of Field</label>
         <input
           type="text"
@@ -71,16 +71,29 @@
         <input type="file" id="file-selector" name="filename">
        
           <label id="pasteLabel" for="subject">Paste HTML Code</label>
-          <textarea id="textArea" name="subject" placeholder="Paste HTML Code Here" style="height:200px"></textarea>
+          <textarea name="editor1"id="textArea" name="subject" placeholder="Paste HTML Code Here" style="height:200px"></textarea>
           
           <input id="submit" type="submit" value="Submit">
           <button id="clearForm" type="button" style="display:none">Clear Form</button>
       
         </form>
+        <!-- <div id= "editor" style="display:none" class="container split">
+         
+            <textarea  style="height: 450px;" id="htmlCode"  placeholder="Type HTML code here" spellcheck="false" oninput="update(0)" onkeydown="if(event.keyCode===9){  v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}if(event.keyCode==8){update(1);}"></textarea>
+          
+           
+        </div> -->
+     
+        <!-- <div id = "iframe" style="height:450px;  margin-bottom:10px; display:none" class="iframe-container split">
+            <iframe id="viewer"></iframe>
+    </div> -->
+    
         <button id="copyHTML" style="display:none">Copy only HTML</button>
             <button id="copyCsharp" style="display:none">Copy C#</button>
       </div>
 </body>
 <script src="script.js"> </script>
 <script src="templates.js"></script>
+<script> CKEDITOR.replace( 'editor1' );</script>
+
 </html>
