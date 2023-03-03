@@ -1214,7 +1214,9 @@ function handleSubmit2() {
     clearedForm.style = "display:none"
     pasteLabel.style = "display:visible"
     place.style="display:visible"
-    // textArea.style = "display:visible"
+    if(document.getElementById("copied1").style="display:none"){
+    document.getElementById("copied1").style="display:none"
+    }
     
     form.reset()
 
