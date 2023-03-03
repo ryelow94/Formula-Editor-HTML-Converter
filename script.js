@@ -103,7 +103,7 @@ if(document.getElementById("copy1")){
   document.getElementById("copy1").remove()
 }
 if(event.target[0].value===""){
-    alert("Text area cannot be empty")
+    alert("add a field alias")
     return;
 }
 

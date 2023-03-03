@@ -1,5 +1,5 @@
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], [type=file] , select, textarea, iframe {
+input[type=text],  select, textarea, iframe {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
@@ -10,6 +10,14 @@ input[type=text], [type=file] , select, textarea, iframe {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
   
+  input[type=file]{width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  
+  
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  
+}
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
     background-color: #04AA6D;
@@ -86,7 +94,7 @@ body {
 
 /* Width of carousel */
 #window, #slide-container {
- 	/* width: 50%; */
+ 	/* max-width: 400px; */
     
 }
 
@@ -103,7 +111,7 @@ body {
 
 .slide {
 	width:100%;
-	max-height: 400px; 
+	height: 400px; 
     
    
 }

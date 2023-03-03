@@ -333,7 +333,6 @@ var dataTable = `<!DOCTYPE html>
 table {
 	max-width: 900px;
 	width: 100%;
-/* 	線の重なりを指定する：collapse	各セルの線を重ねて表示 */
 	border-collapse: collapse;
 	border: 1px solid #DAE3F2;
 	margin-top: 30px;
@@ -1117,7 +1116,7 @@ function copyTemplate() {
   copyHTML.style = "display:visible"
   var copied = document.createElement("p")
   copied.setAttribute("id", "copied")
-  copied.style = "color:green"
+  copied.style = "color:green; font-size:40px"
   copied.textContent = "--- C# String copied ---"
   copyHTML.before(copied)
   if (document.getElementById("copied1")) {
@@ -1163,7 +1162,7 @@ copyHTML.onclick = async () => {
   var copied1 = document.createElement("p")
   copied1.setAttribute("id", "copied1")
   copied1.innerText = "--- HTML copied ---\nYou can make changes to the HTML and paste the code back into the text area below to reconvert it to a C# string"
-  copied1.style = "color:green; text-align:center"
+  copied1.style = "color:green; text-align:center; font-size:25px"
   form.before(copied1)
   copyHTML.style = "display:none"
   copyCsharp.style = "display:visible"
