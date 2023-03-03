@@ -1116,7 +1116,7 @@ function copyTemplate() {
   copyHTML.style = "display:visible"
   var copied = document.createElement("p")
   copied.setAttribute("id", "copied")
-  copied.style = "color:green; font-size:40px"
+  copied.style = "color:green; font-size:40px; text-align:center"
   copied.textContent = "--- C# String copied ---"
   copyHTML.before(copied)
   if (document.getElementById("copied1")) {
@@ -1181,7 +1181,7 @@ copyHTML.onclick = async () => {
 }
 copyCsharp.onclick = () => {
   if (document.getElementById("copied")) {
-    document.getElementById("copied").style = "display:visible; color:green"
+    document.getElementById("copied").style = "display:visible; color:green; font-size:40px; text-align:center;"
   }
   if (document.getElementById("copy1")) {
     document.getElementById("copy1").remove()
@@ -1213,6 +1213,7 @@ function handleSubmit2() {
     // copyToClipBoard.remove()
     clearedForm.style = "display:none"
     pasteLabel.style = "display:visible"
+    place.style="display:visible"
     // textArea.style = "display:visible"
     
     form.reset()
