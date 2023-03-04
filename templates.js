@@ -419,11 +419,9 @@ var dataTableTwo = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head> 
-<style>
+    <style>
 .container {
     width: 80%;
     max-width: 1100px;
@@ -482,6 +480,9 @@ var dataTableTwo = `<!DOCTYPE html>
   // }
   
 </style>
+    <title>Document</title>
+</head> 
+
 <body>
 <div class="container">
 <h2>Important Notes</h2>
@@ -686,7 +687,7 @@ var dataTableTwo = `<!DOCTYPE html>
 </tbody>
 </table>
 </body>
-<thml>`
+</html>`
 var dataTableThree = `
 <!DOCTYPE html>
 <html lang="en">

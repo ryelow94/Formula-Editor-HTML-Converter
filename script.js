@@ -67,10 +67,11 @@ previousArrow.onclick = function() {
 dotArray[0].onclick = showSlides(1); 
 function readSingleFile(evt) {
     //Retrieve the first (and only!) File from the FileList object
+   
 
     var f = evt.target.files[0];
-
-    if (f) {
+     
+     if (f) {
         var r = new FileReader();
         r.onload = function (e) {
              contents = e.target.result;
@@ -78,6 +79,7 @@ function readSingleFile(evt) {
             textArea.style="display:none"
             pasteLabel.style="display:none"
             navigator.clipboard.writeText(contents)
+            console.log(contents)
             
         }
         r.readAsText(f);
@@ -166,6 +168,6 @@ function clearForm(){
         
     }
   };
-  
+
 }
 

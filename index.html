@@ -96,6 +96,20 @@
 </body>
 <script src="script.js"> </script>
 <script src="templates.js"></script>
-<script> CKEDITOR.replace( 'editor1' );</script>
+<script> CKEDITOR.replace( 'editor1', {
+    fullPage: true,
+    extraPlugins: 'docprops,sourcedialog',
+
+    // Disable content filtering because if you use full page mode, you probably
+    // want to  freely enter any HTML content in source mode without any limitations.
+    allowedContent: true,
+    height: 320,
+    
+    removeButtons: 'PasteFromWord', 
+    
+  } );
+
+
+  </script>
 
 </html>
