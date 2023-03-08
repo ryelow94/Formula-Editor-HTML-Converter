@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Template Generator and C# String Converter</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.ckeditor.com/4.4.5.1/full/ckeditor.js"></script>
 </head>
 <body>
     <div style="background-color: #252525; border-radius:1%;" >
-    <h1 style="font-size: 4rem; color: #EF700C; text-align: center; padding:1%; margin-left:1%; margin-right:1%;">HTML Code Editor and C# Converter </h1>
+    <h1 style="font-size: 1.5rem; color: #EF700C; text-align: center; padding:1%; margin-left:1%; margin-right:1%;">HTML Code Editor and C# Converter </h1>
 </div>
 
     <div id="form-div" class="container">
@@ -55,9 +55,8 @@
             <div id="dotsContainer">
                 
             </div>
-            <p style="text-align: center;color:#356F6F">--- Select a template ---</p>
-         <p style="text-align: center; color:#356F6F">--- Or use the form below to upload HTML files/paste HTML code ---</p>
-         <p style="text-align: center; color:#356F6F">--- Not all CSS style attributes are supported by every Email  or ---</p>
+            <p style="text-align: center;color:#356F6F">--- Select a template AND/OR use the form below to upload, paste or write HTML code ---</p>
+         <p style="text-align: center; color:#356F6F">--- Not all CSS style attributes are supported by every email service or IRM formulas ---</p>
         </div>
         <br/>
         <form style="margin-top:10px;" id="form" >
@@ -71,7 +70,8 @@
         <label> Upload an HTML Document</label>
         <input type="file" id="file-selector" name="filename">
        
-          <label id="pasteLabel" for="subject">Paste HTML Code</label>
+          <label id="pasteLabel" for="subject">Paste HTML Code into Source</label>
+          <br>
           <textarea name="editor1"id="textArea" name="subject" placeholder="Paste HTML Code Here" style="height:200px"></textarea>
           <br>
           <input id="submit" type="submit" value="Submit">
@@ -93,12 +93,15 @@
         <button id="copyHTML" style="display:none">Copy only HTML</button>
             <button id="copyCsharp" style="display:none">Copy C#</button>
       </div>
+      <div style="background-color: #252525; border-radius:1%; margin: 1%; height: 50px;" >
+        <p> link </p>
+    </div>
 </body>
 <script src="script.js"> </script>
 <script src="templates.js"></script>
 <script> CKEDITOR.replace( 'editor1', {
     fullPage: true,
-    extraPlugins: 'docprops,sourcedialog',
+    extraPlugins: 'docprops,colordialog,tableresize',
 
     // Disable content filtering because if you use full page mode, you probably
     // want to  freely enter any HTML content in source mode without any limitations.
