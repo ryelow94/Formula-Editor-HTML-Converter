@@ -11,16 +11,16 @@
 ![App](/App%20Home%201.png)
 ![App Continued](/App%20Home%202.png) 
 
-### C# String Generated in the App:
+### Example of C# String Generated in the App:
 ![C# String Generated in App](/C%23%20String%20Generated%20by%20app.png)
 
 ### Corresponding HTML of Generated C# String:
 ![HTML Output](/HTML%20output.png) 
 
-### C# String added to Formula Engine in NAVEX IRM
+### Example of C# String added to Formula Engine in NAVEX IRM
 ![Converted C# in Formula Engine](/Converted%20C%23%20in%20Formula%20Engine.png) 
 
-### Rendered HTML in a NAVEX IRM Record
+### Example of Rendered HTML in a NAVEX IRM Record
 ![HTML in IRM Record](/HTML%20in%20IRM%20record.png)
 
 ## Usage: 
