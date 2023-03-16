@@ -27,7 +27,7 @@
     - Clearing the form using the red "Clear Form" button clears the alias value, but only clears the editor if the source tool is open. 
         - You can press the "New Page" icon in the text editor toolbar to clear it otherwise. 
 - For any questions relating to the functionality of the Rich Text Editor, you can select the "?" icon in the toolbar to see documentation relating to the "CKeditor." 
-- Finally, you can add template variables (surrounded by []) to any text area within the HTML to pull the data from other IRM fields within an instance. 
+- Finally, you can add template variables (surrounded by [ ]) to any text area within the HTML to pull the data from other IRM fields within an instance. 
     - Just be sure to know that date/time fields will need to be converted to a string element if you intend to use one within the C# string. 
     - Example: 
 
