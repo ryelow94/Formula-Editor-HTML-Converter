@@ -1,7 +1,7 @@
 let templates = []
 var place = document.getElementById("place");
 var form = document.getElementById("form")
-var locations = ["---- Click to Copy 1 ----", "---- Click to Copy 2 ----", "---- Click to Copy 3 ----", "---- Click to copy 4 ----", "---- Click to Copy 5 ----", "---- Click to Copy 6 ----", "---- Click to copy 7 ----"]
+var locations = ["---- Click to Copy 1 ----", "---- Click to Copy 2 ----", "---- Click to Copy 3 ----", "---- Click to copy 4 ----", "---- Click to Copy 5 ----", "---- Click to Copy 6 ----", "---- Click to copy 7 ----", "---- Click to copy 7 ----"]
 let display = ''
 var vendorAssessment = `<table role="presentation" id="emailNotification" style="margin: 0px auto;">
 <tbody><tr>
@@ -1094,7 +1094,80 @@ var basicEmail = `
     </table>
 </body>
 `
-templates.push(vendorAssessment, cancelled, dataTable, dataTableTwo, dataTableThree, dataTableFour, basicEmail)
+var niceTable = `
+<html>
+<head>
+	<title></title>
+</head>
+<body style="cursor: auto;">
+<table cellpadding="5" cellspacing="28" style="border-radius:1%;border:solid black 1px;margin-left:25%;padding-bottom:0%;width:50%;">
+	<caption>
+	<h1 style="text-align: left; margin-left: 40px;"><big><span style="font-size:26px;">Risk Assessment:</span></big></h1>
+	</caption>
+	<thead>
+		<tr style="background-color:#D8D8D8;">
+			<th style=" padding: 10px; width: 100%; text-align: left;"><span style="padding-left:10px">Safe Harbor</span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr style="background-color:#D8D8D8;">
+			<td style=" text-align: left; padding-left: 20px; background-color: rgb(255, 255, 255);">
+			<p style="margin-top:3%; margin-bottom:0px;font-weight: 700;">Does the incident fall under the Safe Harbor?*</p>
+
+			<p style=" margin-top:0%; margin-bottom: 3%; line-height:100%; padding-left:10px; padding-top: 0px; font-size: small;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+			</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td style=" text-align: left; padding-left: 20px;  background-color: #D8d8d8;">
+			<div style="padding-left: 10px; font-weight: 700;"><span style="font-size:14px;">No</span></div>
+			</td>
+		</tr>
+		<tr style="background-color:#D8D8D8;">
+			<td style=" text-align: left; padding-left: 20px; background-color: rgb(255, 255, 255);">
+			<p style="margin-top:3%; margin-bottom:0px;font-weight: 700;">Does the incident fall under the Safe Harbor?*</p>
+
+			<p style=" margin-top:0%; margin-bottom: 3%; line-height:100%; padding-left:10px; padding-top: 0px; font-size: small;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+			</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td style=" text-align: left; padding-left: 20px;  background-color: #D8d8d8;">
+			<div style="padding-left: 10px; font-weight: 700;"><span style="font-size:14px;">No</span></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table cellpadding="5" cellspacing="28" style="border:solid black 1px;border-radius:1%;margin-left:25%;padding-bottom:0%;width:50%;">
+	<thead>
+		<tr style="background-color:#D8D8D8;">
+			<th style=" padding: 10px; width: 100%; text-align: left;"><span style="padding-left:10px">UnSafe Harbor</span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr style="background-color:#D8D8D8;">
+			<td style=" text-align: left; padding-left: 20px; background-color: rgb(255, 255, 255);">
+			<p style="margin-top:3%; margin-bottom:0px;font-weight: 700;">Does the incident fall under the Safe Harbor?*</p>
+
+			<p style=" margin-top:0%; margin-bottom: 3%; line-height:100%; padding-left:10px; padding-top: 0px; font-size: small;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+			</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td style=" text-align: left; padding-left: 20px;  background-color: #D8d8d8;">
+			<div style="padding-left: 10px; font-weight: 700;"><small><span style="font-size:14px;">No</span></small></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+`
+templates.push(vendorAssessment, cancelled, dataTable, dataTableTwo, dataTableThree, dataTableFour, basicEmail, niceTable)
 
 var copyHTML = document.getElementById("copyHTML")
 var copyCsharp = document.getElementById("copyCsharp")
@@ -1149,6 +1222,10 @@ function copyTemplate() {
   }
   if (place.innerHTML === locations[6]) {
     display = templates[6]
+
+  }
+  if (place.innerHTML === locations[7]) {
+    display = templates[7]
 
   }
 
