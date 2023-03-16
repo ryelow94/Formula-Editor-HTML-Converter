@@ -11,12 +11,16 @@
 ![App](/App%20Home%201.png)
 ![App Continued](/App%20Home%202.png) 
 
+### Example of C# String Generated in the App:
 ![C# String Generated in App](/C%23%20String%20Generated%20by%20app.png)
 
-![HTML Output](/HTML%20output.png)
+### Corresponding HTML of Generated C# String:
+![HTML Output](/HTML%20output.png) 
 
-![Converted C# in Formula Engine](/Converted%20C%23%20in%20Formula%20Engine.png)
+### Example of C# String added to Formula Engine in NAVEX IRM
+![Converted C# in Formula Engine](/Converted%20C%23%20in%20Formula%20Engine.png) 
 
+### Example of Rendered HTML in a NAVEX IRM Record
 ![HTML in IRM Record](/HTML%20in%20IRM%20record.png)
 
 ## Usage: 
@@ -27,11 +31,11 @@
     - Clearing the form using the red "Clear Form" button clears the alias value, but only clears the editor if the source tool is open. 
         - You can press the "New Page" icon in the text editor toolbar to clear it otherwise. 
 - For any questions relating to the functionality of the Rich Text Editor, you can select the "?" icon in the toolbar to see documentation relating to the "CKeditor." 
-- Finally, you can add template variables (surrounded by []) to any text area within the HTML to pull the data from other IRM fields within an instance. 
+- Finally, you can add template variables (surrounded by [ ]) to any text area within the HTML to pull the data from other IRM fields within an instance. 
     - Just be sure to know that date/time fields will need to be converted to a string element if you intend to use one within the C# string. 
     - Example: 
 
-![Date/Time variable to String Variable Example](/date%20to%20string.png)
+    ![Date/Time variable to String Variable Example](/date%20to%20string.png)
 
 ## Limitations:
 1. Some HTML and CSS elements and attributes are not supported by the NAVEX IRM formula engine or certain email service providers (Outlook, Gmail, etc.). 
