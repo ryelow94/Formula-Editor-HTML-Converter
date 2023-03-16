@@ -14,7 +14,7 @@
 ### C# String Generated in the App:
 ![C# String Generated in App](/C%23%20String%20Generated%20by%20app.png)
 
-### HTML Output
+### Corresponding HTML to Generated C# String:
 ![HTML Output](/HTML%20output.png) 
 
 ### C# String added to Formula Engine in NAVEX IRM
