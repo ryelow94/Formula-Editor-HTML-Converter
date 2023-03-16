@@ -1162,7 +1162,7 @@ copyHTML.onclick = async () => {
   document.getElementById("copied").style = "display:none"
   var copied1 = document.createElement("p")
   copied1.setAttribute("id", "copied1")
-  copied1.innerText = "--- HTML copied ---\nYou can make changes to the HTML and paste the code back into the text area below to reconvert it to a C# string"
+  copied1.innerText = "--- HTML copied ---\nYou can make changes to the HTML in the editor below and submit it to reconvert it to a C# string"
   copied1.style = "color:green; text-align:center; font-size:25px"
   form.before(copied1)
   copyHTML.style = "display:none"
