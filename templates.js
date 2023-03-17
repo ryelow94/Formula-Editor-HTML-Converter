@@ -1,7 +1,7 @@
 let templates = []
 var place = document.getElementById("place");
 var form = document.getElementById("form")
-var locations = ["---- Click to Copy 1 ----", "---- Click to Copy 2 ----", "---- Click to Copy 3 ----", "---- Click to copy 4 ----", "---- Click to Copy 5 ----", "---- Click to Copy 6 ----", "---- Click to copy 7 ----", "---- Click to copy 7 ----"]
+var locations = ["---- Click to Copy 1 ----", "---- Click to Copy 2 ----", "---- Click to Copy 3 ----", "---- Click to copy 4 ----", "---- Click to Copy 5 ----", "---- Click to Copy 6 ----", "---- Click to copy 7 ----", "---- Click to copy 8 ----"]
 let display = ''
 var vendorAssessment = `<table role="presentation" id="emailNotification" style="margin: 0px auto;">
 <tbody><tr>
