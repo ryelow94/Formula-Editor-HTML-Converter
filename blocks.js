@@ -40,7 +40,41 @@ var header = `<html>
 </table>
 </body>
 </html>`
+var titleAndText = `<div class="container">
+<h4>Taking Responsibility</h4>
+<p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
+</div>
 
+
+<div class="container-sm">
+<h4>Taking Responsibility</h4>
+<p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
+</div>
+
+<div class="container-md">
+<h4>Taking Responsibility</h4>
+<p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
+</div>
+
+<div class="container-lg">
+<h4>Taking Responsibility</h4>
+<p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
+</div>
+
+<div class="container-xl">
+<h4>Taking Responsibility</h4>
+<p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
+</div>
+
+<div class="container-xxl">
+<h4>Taking Responsibility</h4>
+<p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
+</div>
+
+<div class="container-fluid">
+<h4>Taking Responsibility</h4>
+<p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
+</div>`
 function copyBlock () {
     switch(select.value) {
         case "Header":
@@ -63,7 +97,15 @@ function copyBlock () {
         copiedBlock.remove()
       }, "5000");
           break; 
-         
+          case "Text with Title":
+       navigator.clipboard.writeText(titleAndText); 
+       var copiedBlock = document.createElement("p")
+       copiedBlock.style = "text-align:center; color:green"  
+       copiedBlock.textContent = "---Copied Container Block---"
+       form2.after(copiedBlock)
+       setTimeout(() => {
+        copiedBlock.remove()
+      }, "5000");
         default:
           return;
       }
