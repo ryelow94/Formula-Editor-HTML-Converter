@@ -62,6 +62,16 @@
          <p style="text-align: center; color:#356F6F">--- Not all CSS style attributes are supported by every email service or IRM formulas ---</p>
         </div>
         <br/>
+        <form  id="form2">
+            <label for="blocks">HTML Building Blocks:</label>
+            <select onchange="copyBlock()" name="blocks" id="blocks" form="form2">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Header">Header</option>
+                <option value="Table">Table</option>
+      
+              </select>
+              
+          </form>
         <form style="margin-top:10px;" id="form" >
             <label id="headerLabel" for="row">Alias Name of Field</label>
         <input
@@ -100,6 +110,7 @@
         <p> link </p>
     </div>
 </body>
+<script src="blocks.js"></script>
 <script src="script.js"> </script>
 <script src="templates.js"></script>
 <script> CKEDITOR.replace( 'editor1', {
