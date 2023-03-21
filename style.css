@@ -19,6 +19,32 @@ input[type=text],  select, textarea, iframe {
   margin-bottom: 16px; /* Bottom margin */
   
 }
+.button {
+  background-color: #EF700C;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #f88e3c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px; 
+  margin-bottom: 15px;
+  cursor: pointer;
+}
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
     background-color: #04AA6D;
