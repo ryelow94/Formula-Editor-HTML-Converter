@@ -79,15 +79,15 @@ function readSingleFile(evt) {
             // document.getElementById("ReadResult").innerHTML = contents;
             
             navigator.clipboard.writeText(contents)
-            var copiedBlock = document.createElement("p")
+            var copiedBlock = document.createElement("span")
        copiedBlock.style = "font-size:smaller; color:green"  
-       copiedBlock.textContent = "---Copied HTML File---"
-       uploadLabel.after(copiedBlock)
+       copiedBlock.textContent = "Copied"
+       fileSelector.before(copiedBlock)
        setTimeout(() => {
         copiedBlock.remove()
       }, "3000");
-      textArea.style="display:none"
-            pasteLabel.style="display:none"
+      // textArea.style="display:none"
+            // pasteLabel.style="display:none"
             console.log(contents)
             
         }
@@ -114,8 +114,8 @@ if(document.getElementById("copy1")){
   document.getElementById("copy1").remove()
 }
 if(event.target[0].value===""){
-    alert("add a field alias")
-    return;
+    event.target[0].value = "_alias"
+    alert("Alias name left blank. Be sure to add the correct name when adding the C# string to the formula engine.") 
 }
 
 var copyToClipBoard = document.createElement("button");
