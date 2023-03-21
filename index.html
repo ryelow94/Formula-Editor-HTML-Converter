@@ -59,7 +59,7 @@
                 
             </div>
             <p style="text-align: center;color:#356F6F">--- Select a template AND/OR use the form below to upload, paste or write HTML code ---</p>
-         <p style="text-align: center; color:#356F6F">--- Not all CSS style attributes are supported by every email service or IRM formulas ---</p>
+         <p style="text-align: center; color:#356F6F">--- Not all CSS style attributes are supported by every email service or the IRM formula engine ---</p>
         </div>
         <br/>
         <form  id="form2">
@@ -69,6 +69,7 @@
                 <option value="Header">Header</option>
                 <option value="Table">Table</option> 
                 <option value="Text with Title">Text with Title</option>
+                <option value="Button">Button with Link</option>
       
               </select>
               
@@ -81,10 +82,10 @@
           name="row"
           placeholder="Alias must include underscore if not a system field. For example: _alias"
         />
-        <label> Upload and Copy an HTML Document to Clipboard</label>
+        <label id="upload-label"> Upload and Copy an HTML Document to Clipboard</label>
         <input type="file" id="file-selector" name="filename">
        
-          <label id="pasteLabel" for="subject">Click "Source" on the Rich Text Field and Paste HTML Code to make changes</label>
+          <label id="pasteLabel" for="subject">Click "Source" on the Rich Text Editor and Paste HTML Code to make changes</label>
           <br>
           <textarea name="editor1"id="textArea" name="subject" placeholder="Paste HTML Code Here" style="height:200px"></textarea>
           <br>

@@ -4,6 +4,7 @@ var formDiv = document.getElementById("form-div")
 var form = document.getElementById("form");
 let contents = ""
 const fileSelector = document.getElementById('file-selector');
+var uploadLabel = document.getElementById("upload-label")
 var textArea = document.getElementById("textArea")
 var pasteLabel = document.getElementById("pasteLabel")
 // var copyCard = document.getElementById("copyCard")
@@ -76,9 +77,17 @@ function readSingleFile(evt) {
         r.onload = function (e) {
              contents = e.target.result;
             // document.getElementById("ReadResult").innerHTML = contents;
-            textArea.style="display:none"
-            pasteLabel.style="display:none"
+            
             navigator.clipboard.writeText(contents)
+            var copiedBlock = document.createElement("p")
+       copiedBlock.style = "font-size:smaller; color:green"  
+       copiedBlock.textContent = "---Copied HTML File---"
+       uploadLabel.after(copiedBlock)
+       setTimeout(() => {
+        copiedBlock.remove()
+      }, "3000");
+      textArea.style="display:none"
+            pasteLabel.style="display:none"
             console.log(contents)
             
         }

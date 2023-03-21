@@ -75,6 +75,27 @@ var titleAndText = `<div class="container">
 <h4>Taking Responsibility</h4>
 <p>"Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process</p>
 </div>`
+var buttonWithLink = `<html>
+<head>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<a href="#" class="button">Link Button</a>
+</body>
+</html>`
 function copyBlock () {
     switch(select.value) {
         case "Header":
@@ -106,6 +127,16 @@ function copyBlock () {
        setTimeout(() => {
         copiedBlock.remove()
       }, "5000");
+      break; 
+      case "Button":
+   navigator.clipboard.writeText(buttonWithLink); 
+   var copiedBlock = document.createElement("p")
+   copiedBlock.style = "text-align:center; color:green"  
+   copiedBlock.textContent = "---Copied Button Block---"
+   form2.after(copiedBlock)
+   setTimeout(() => {
+    copiedBlock.remove()
+  }, "5000");
         default:
           return;
       }
