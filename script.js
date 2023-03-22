@@ -68,7 +68,7 @@ previousArrow.onclick = function() {
 dotArray[0].onclick = showSlides(1); 
 function readSingleFile(evt) {
     //Retrieve the first (and only!) File from the FileList object
-   
+
 
     var f = evt.target.files[0];
      
@@ -80,13 +80,14 @@ function readSingleFile(evt) {
             
             navigator.clipboard.writeText(contents)
             var copiedBlock = document.createElement("span")
-       copiedBlock.style = "font-size:smaller; color:green"  
+            fileSelector.before(copiedBlock)
+       copiedBlock.style = "font-size:smaller; color:green;"  
+       copiedBlock.setAttribute("id", "fadeIn")
        copiedBlock.textContent = "Copied"
-       fileSelector.before(copiedBlock)
        setTimeout(() => {
         copiedBlock.remove()
       }, "3000");
-      // textArea.style="display:none"
+      textArea.style="display:none"
             // pasteLabel.style="display:none"
             console.log(contents)
             

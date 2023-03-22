@@ -96,10 +96,10 @@ var buttonWithLink = `<html>
 <a href="#" class="button">Link Button</a>
 </body>
 </html>`
-function copyBlock () {
+async function copyBlock () {
     switch(select.value) {
         case "Header":
-       navigator.clipboard.writeText(header); 
+       await navigator.clipboard.writeText(header); 
        var copiedBlock = document.createElement("p")
        copiedBlock.style = "text-align:center; color:green"
        copiedBlock.textContent = "---Copied Header Block---"
@@ -109,7 +109,7 @@ function copyBlock () {
       }, "5000");
           break;
         case "Table":
-       navigator.clipboard.writeText(table); 
+       await navigator.clipboard.writeText(table); 
        var copiedBlock = document.createElement("p")
        copiedBlock.style = "text-align:center; color:green"  
        copiedBlock.textContent = "---Copied Table Block---"
@@ -119,7 +119,7 @@ function copyBlock () {
       }, "5000");
           break; 
           case "Text with Title":
-       navigator.clipboard.writeText(titleAndText); 
+       await navigator.clipboard.writeText(titleAndText); 
        var copiedBlock = document.createElement("p")
        copiedBlock.style = "text-align:center; color:green"  
        copiedBlock.textContent = "---Copied Container Block---"
@@ -129,7 +129,7 @@ function copyBlock () {
       }, "5000");
       break; 
       case "Button":
-   navigator.clipboard.writeText(buttonWithLink); 
+   await navigator.clipboard.writeText(buttonWithLink); 
    var copiedBlock = document.createElement("p")
    copiedBlock.style = "text-align:center; color:green"  
    copiedBlock.textContent = "---Copied Button Block---"
