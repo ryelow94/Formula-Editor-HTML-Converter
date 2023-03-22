@@ -97,6 +97,8 @@ var buttonWithLink = `<html>
 </body>
 </html>`
 async function copyBlock () {
+    console.log(select.value)
+    // console.log(buttonWithLink)
     switch(select.value) {
         case "Header":
        await navigator.clipboard.writeText(header); 
@@ -138,6 +140,6 @@ async function copyBlock () {
     copiedBlock.remove()
   }, "5000");
         default:
-          return;
+          
       }
 }

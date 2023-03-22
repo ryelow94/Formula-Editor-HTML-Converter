@@ -87,7 +87,7 @@ function readSingleFile(evt) {
        setTimeout(() => {
         copiedBlock.remove()
       }, "3000");
-      textArea.style="display:none"
+      // textArea.style="display:none"
             // pasteLabel.style="display:none"
             console.log(contents)
             

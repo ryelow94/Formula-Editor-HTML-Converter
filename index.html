@@ -86,7 +86,7 @@
        
           <label id="pasteLabel" for="subject">Click "Source" on the Rich Text Editor and Paste HTML Code to make changes</label>
           <br>
-          <textarea name="editor1"id="textArea" name="subject" placeholder="Paste HTML Code Here" style="height:200px"></textarea>
+          <textarea name="editor1" id="textArea" name="subject" placeholder="Paste HTML Code Here" style="height:200px"></textarea>
           <br>
           <input id="submit" type="submit" value="Submit">
           <br>
@@ -111,9 +111,6 @@
         <p> link </p>
     </div>
 </body>
-<script src="blocks.js"></script>
-<script src="script.js"> </script>
-<script src="templates.js"></script>
 <script> CKEDITOR.replace( 'editor1', {
     fullPage: true,
     extraPlugins: 'docprops,colordialog,tableresize',
@@ -126,8 +123,9 @@
     removeButtons: 'PasteFromWord', 
     
   } );
-
-
-  </script>
+</script>
+<script src="blocks.js"></script>
+<script src="script.js"> </script>
+<script src="templates.js"></script>
 
 </html>
