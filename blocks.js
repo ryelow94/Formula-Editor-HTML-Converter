@@ -96,6 +96,41 @@ var buttonWithLink = `<html>
 <a href="#" class="button">Link Button</a>
 </body>
 </html>`
+var buttonWithLink2 = `<html>
+<head>
+	<title></title>
+	<style type="text/css">.button {
+background-color: #3265d7;
+border: none;
+color: white;
+padding: 12px 15px;
+text-align: center
+text-decoration: none;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: .333rem
+}
+
+.button:hover {
+background-color: #244899;
+border: none;
+color: white;
+padding: 12px 15px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: .333rem
+}
+	</style>
+</head>
+<body>
+<p><span><a class="button" href="">Assign Tasks</a></span></p>
+</body>
+</html>
+`
 async function copyBlock () {
     console.log(select.value)
     // console.log(buttonWithLink)
@@ -139,6 +174,16 @@ async function copyBlock () {
    setTimeout(() => {
     copiedBlock.remove()
   }, "5000");
+  break;
+  case "Button 2":
+  await navigator.clipboard.writeText(buttonWithLink2); 
+  var copiedBlock = document.createElement("p")
+  copiedBlock.style = "text-align:center; color:green"  
+  copiedBlock.textContent = "---Copied Button 2 Block---"
+  form2.after(copiedBlock)
+  setTimeout(() => {
+   copiedBlock.remove()
+ }, "5000");
         default:
           
       }
