@@ -131,6 +131,42 @@ border-radius: .333rem
 </body>
 </html>
 `
+var dashboardLinks = `<!DOCTYPE html><html><head>
+<style>
+a.ex1:link, a.ex1:visited 
+{
+  border-radius: 5%;
+  padding: 50px;
+  width: 125px;
+  height: 10px;
+  line-height: 10px;
+  background-color: #0014DC;
+  color: white;
+  padding: 25px 35px;
+  text-align: center;
+  font-size:18px;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.8s;
+}
+
+a.ex1:hover, a.ex1:active 
+{
+  background-color: #3c3737;
+  cursor:pointer;
+}
+a.ex2:visited, a.ex2:link 
+{
+ margin-right: 50%;
+ text-decoration: none;
+}
+</style>
+</head>
+<body>
+<p style="text-align:center; color:red;"> you must add a url to the anchor tag href of each link for buttons to work  </p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center; cursor:pointer"><span style="font-size: 12px;"> <a class="ex1" href=""><strong>RISK</strong></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="ex1" href=""><strong> AUDIT</strong></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="ex1" href=""><strong> INCIDENT</strong></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="ex1" href=""><strong> THIRD PARTY</strong></a></p>
+</body></html>`
 async function copyBlock () {
     console.log(select.value)
     // console.log(buttonWithLink)
@@ -184,7 +220,16 @@ async function copyBlock () {
   setTimeout(() => {
    copiedBlock.remove()
  }, "5000");
-        default:
-          
+ break;
+ case "Dashboard Links":
+  await navigator.clipboard.writeText(dashboardLinks); 
+  var copiedBlock = document.createElement("p")
+  copiedBlock.style = "text-align:center; color:green"  
+  copiedBlock.textContent = "---Copied Dashboard Links Block---"
+  form2.after(copiedBlock)
+  setTimeout(() => {
+   copiedBlock.remove()
+ }, "5000");
+        default:     
       }
 }
