@@ -314,379 +314,809 @@ var cancelled = `<table role="presentation" id="emailNotification" style="margin
   </td>
 </tr>
 </tbody></table>`
-var dataTable = `<!DOCTYPE html>
-<html lang="en">
+var dataTable = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Title</title>
+
+
+<style type="text/css">
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em;
+}
+body {
+background-color: #f6f6f6;
+}
+@media only screen and (max-width: 640px) {
+  body {
+    padding: 0 !important;
+  }
+  h1 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    padding: 0 !important; width: 100% !important;
+  }
+  .content {
+    padding: 0 !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+</style>
 </head>
-<style>
-    .l-inner {
-	max-width: 1104px;
-	padding-right: 40px;
-	padding-left: 40px;
-	margin-inline: auto;
-}
 
-table {
-	max-width: 900px;
-	width: 100%;
-	border-collapse: collapse;
-	border: 1px solid #DAE3F2;
-	margin-top: 30px;
-}
+<body itemscope itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6">
 
-th {
-	display: block;
-	background-color: #DAE3F2;
-	padding: 17px 20px;
-	font-size: 14px;
-	font-weight: 500;
-	color: #000;
-	text-align: left;
-	vertical-align: top;
-	border-bottom: 1px solid #FFF;
-}
-@media screen and (min-width: 768px) {
-	th,td {
-		display: table-cell
-	}
-	th {
-		width: 230px;
-	}
-}
-
-td {
-	display: block;
-	background-color: #FFF;
-	padding: 17px 20px;
-	font-size: 14px;
-	font-weight: 500;
-	color: #000;
-	text-align: left;
-	vertical-align: top;
-	border-bottom: 1px solid #DAE3F2;
-}
-
-td iframe {
-	max-width: 400px;
-	width: 100%;
-	height: auto;
-	aspect-ratio: 400/300;
-}
-
-/* 最後のth,tdの下線不要 */
-tr:last-of-type th {
-	border-bottom: none;
-}
-
-tr:last-of-type td {
-	border-bottom: none;
-}
-</style>
-</html>
-
-<body>
-	<div class="l-inner">
-		<table>
-			<tr>
-				<th>Header</th>
-				<td>Value</td>
-			</tr>
-			<tr>
-				<th>Header2</th>
-				<td>Value</td>
-			</tr>
-			<tr>
-				<th>Header3</th>
-				<td class="p-table__access-data">
-					<p>Value</p>
-					<p>Value</p>
-				</td>
-			</tr>
-			<tr>
-				<th>Header4</th>
-				<td>Value</td>
-			</tr>
-			
-		</table>
-	</div>
-</body> 
+<table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
+		<td class="container" width="600" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;" valign="top">
+			<div class="content" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
+				<table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background-color: #fff; margin: 0; border: 1px solid #e9e9e9;" bgcolor="#fff"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="alert alert-warning" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #fff; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; background-color: #FF9F00; margin: 0; padding: 20px;" align="center" bgcolor="#FF9F00" valign="top">
+							Header Text
+						</td>
+					</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
+							<table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+										Lorem <strong style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">Ipsum</strong> Dolor.
+									</td>
+								</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+										Body Text for the email template
+									</td>
+								</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+										<a href="http://www.mailgun.com" class="btn-primary" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background-color: #348eda; margin: 0; border-color: #348eda; border-style: solid; border-width: 10px 20px;">Button Link</a>
+									</td>
+								</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+										Closing Text
+									</td>
+								</tr></table></td>
+					</tr></table><div class="footer" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;">
+					<table width="100%" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="aligncenter content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #999; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"></td>
+						</tr></table></div></div>
+		</td>
+		<td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
+	</tr></table></body>
 </html>`
-var dataTableTwo = `<!DOCTYPE html>
-<html lang="en">
+var dataTableTwo = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-.container {
-    width: 80%;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  /* RESPONSIVE TABLE STARTS HERE */
-  table {
-    margin: 0 auto 2rem;
-  }
-  
-  .responsiveTbl {
-    width: 80%;
-    max-width: 1000px;
-    text-align: center;
-  }
-  
-  caption {
-    padding-bottom: 0.5em;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-  
-  // tr:nth-of-type(odd) {
-  //   background: #FFFFFF;
-  // }
-  
-  tr:nth-of-type(even) {
-    background: #d1d5d9;
-  }
-  
-  .tableHead th {
-    background-color: #708090;
-    color: white;
-    font-weight: bold;
-    padding: 0.5em 0.375em;
-    text-align: center;
-    border: 1px solid #aaa;
-  }
-  
-  .responsiveTbl {
-    border-collapse: collapse;
-  }
-  
-  .responsiveTbl td {
-    padding: 0.25em;
-    border: 1px solid #aaa;
-    text-align: center;
-    white-space: nowrap;
-  }
-  
-  // td:nth-last-child(1) {
-  //   border-right: 1px solid black;
-  // }
-  
-</style>
-    <title>Document</title>
-</head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>New Assignment</title>
+  <style type="text/css">
+    /* reset */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    nav,
+    section,
+    summary {
+      display: block
+    }
 
-<body>
-<div class="container">
-<h2>Important Notes</h2>
-  <p>Back in 2018 I spent a few months searching for the CSS for a responsive table. I wish I could remember where I found this so that I could credit the person, but it's been too long. &quot;Thanks, whoever you are!&quot; Although, I have made a lot of changes to their CSS.</p>
-  <p>The table below is an example of guitar chords from my website <a
-    href="https://everyguitarchord.com/c-major-scale-chords-every-diatonic-chord/" target="_blank">Every Guitar Chord</a>.
-  Here are the important notes:</p>
-<ol>
-  <li>The CSS is desktop-first, so you would have to switch everything around for mobile-first.</li>
-  <li>I have some CSS commented out. I may or may not use it so I left it in.</li>
-  <li>On mobile view the <code>tbody td</code> cells have a thicker bottom border. I have not tried to remove it yet.</li>
-  <li>The properties and values for <code>td</code> and <code>td:before</code> in the media query are <em>odd</em>. I would like to change some of those properties and/or values because I would like the same styling for the column headers that I have on desktop-view but background-color does not work correctly.</li>
-  <li>At the end of the media query you have to add your column heading names to the <code>content</code> value for each <code>nth-of-type(n):before</code> rule.</li>
-</ol>
-</div>
+    audio,
+    canvas,
+    video {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1
+    }
 
-<table class="responsiveTbl">
-<caption>C Chords From The C Major Scale</caption>
-<thead class="tableHead">
-  <tr>
-    <th>Chord Name</th>
-    <th>1st Note</th>
-    <th>2nd Note</th>
-    <th>3rd Note</th>
-    <th>4th Note</th>
-    <th>5th Note</th>
-    <th>6th Note</th>
-    <th>Equal Chord1</th>
-    <th>Equal Chord2</th>
-    <th>Equal Chord3</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td data-title="Chord">C5<sup>*</sup></td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">G</td>
-    <td data-title="3rd Note">C</td>
-    <td data-title="4th Note">-</td>
-    <td data-title="5th Note">-</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">-</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td>C Maj</td>
-    <td>C</td>
-    <td>E</td>
-    <td>G</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">C6</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">A</td>
-    <td data-title="5th Note">-</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">Am7</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">C add9</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">D</td>
-    <td data-title="5th Note">-</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">-</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">C6 add9</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">A</td>
-    <td data-title="5th Note">D</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">Am11</td>
-    <td data-title="Equal Chord2">D9 sus</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">C add9/11</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">D</td>
-    <td data-title="5th Note">F</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">G13 sus</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">C6 add9/11</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">A</td>
-    <td data-title="5th Note">D</td>
-    <td data-title="6th Note">F</td>
-    <td data-title="Equal Chord1">Fmaj9/13</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">Cmaj7</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">B</td>
-    <td data-title="5th Note">-</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">-</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">Cmaj9</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">B</td>
-    <td data-title="5th Note">D</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">-</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">Cmaj13</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">B</td>
-    <td data-title="5th Note">A</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">Am9</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">Cmaj9/13</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">E</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">B</td>
-    <td data-title="5th Note">D</td>
-    <td data-title="6th Note">A</td>
-    <td data-title="Equal Chord1">G6 add9/11</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">Csus</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">F</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">-</td>
-    <td data-title="5th Note">-</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">-</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">Csus2</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">D</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">-</td>
-    <td data-title="5th Note">-</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">Gsus</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-  <tr>
-    <td data-title="Chord">Csus add9</td>
-    <td data-title="1st Note">C</td>
-    <td data-title="2nd Note">F</td>
-    <td data-title="3rd Note">G</td>
-    <td data-title="4th Note">D</td>
-    <td data-title="5th Note">-</td>
-    <td data-title="6th Note">-</td>
-    <td data-title="Equal Chord1">G7sus</td>
-    <td data-title="Equal Chord2">-</td>
-    <td data-title="Equal Chord3">-</td>
-  </tr>
-</tbody>
-</table>
+    audio:not([controls]) {
+      display: none;
+      height: 0
+    }
+
+    [hidden] {
+      display: none
+    }
+
+    html {
+      font-size: 100%;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%
+    }
+
+    html,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: sans-serif
+    }
+
+    body {
+      margin: 0
+    }
+
+    a:focus {
+      outline: thin dotted
+    }
+
+    a:active,
+    a:hover {
+      outline: 0
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0 0.67em 0
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin: 0 0 .83em 0
+    }
+
+    h3 {
+      font-size: 1.17em;
+      margin: 1em 0
+    }
+
+    h4 {
+      font-size: 1em;
+      margin: 1.33em 0
+    }
+
+    h5 {
+      font-size: .83em;
+      margin: 1.67em 0
+    }
+
+    h6 {
+      font-size: .75em;
+      margin: 2.33em 0
+    }
+
+    abbr[title] {
+      border-bottom: 1px dotted
+    }
+
+    b,
+    strong {
+      font-weight: bold
+    }
+
+    blockquote {
+      margin: 1em 40px
+    }
+
+    dfn {
+      font-style: italic
+    }
+
+    mark {
+      background: #ff0;
+      color: #000
+    }
+
+    p,
+    pre {
+      margin: 1em 0
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: monospace, serif;
+      _font-family: 'courier new', monospace;
+      font-size: 1em
+    }
+
+    pre {
+      white-space: pre;
+      white-space: pre-wrap;
+      word-wrap: break-word
+    }
+
+    q {
+      quotes: none
+    }
+
+    q:before,
+    q:after {
+      content: '';
+      content: none
+    }
+
+    small {
+      font-size: 75%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sup {
+      top: -0.5em
+    }
+
+    sub {
+      bottom: -0.25em
+    }
+
+    dl,
+    menu,
+    ol,
+    ul {
+      margin: 1em 0
+    }
+
+    dd {
+      margin: 0 0 0 40px
+    }
+
+    menu,
+    ol,
+    ul {
+      padding: 0 0 0 40px
+    }
+
+    nav ul,
+    nav ol {
+      list-style: none;
+      list-style-image: none
+    }
+
+    img {
+      border: 0;
+      -ms-interpolation-mode: bicubic
+    }
+
+    svg:not(:root) {
+      overflow: hidden
+    }
+
+    figure {
+      margin: 0
+    }
+
+    form {
+      margin: 0
+    }
+
+    fieldset {
+      border: 1px solid #c0c0c0;
+      margin: 0 2px;
+      padding: .35em .625em .75em
+    }
+
+    legend {
+      border: 0;
+      padding: 0;
+      white-space: normal;
+      *margin-left: -7px
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 100%;
+      margin: 0;
+      vertical-align: baseline;
+      *vertical-align: middle
+    }
+
+    button,
+    input {
+      line-height: normal
+    }
+
+    button,
+    html input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      -webkit-appearance: button;
+      cursor: pointer;
+      *overflow: visible
+    }
+
+    button[disabled],
+    input[disabled] {
+      cursor: default
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      box-sizing: border-box;
+      padding: 0;
+      *height: 13px;
+      *width: 13px
+    }
+
+    input[type="search"] {
+      -webkit-appearance: textfield;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box
+    }
+
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+      border: 0;
+      padding: 0
+    }
+
+    textarea {
+      overflow: auto;
+      vertical-align: top
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    /* custom client-specific styles including styles for different online clients */
+    .ReadMsgBody {
+      width: 100%;
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    /* hotmail / outlook.com */
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+      line-height: 100%;
+    }
+
+    /* hotmail / outlook.com */
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    /* Outlook */
+    #outlook a {
+      padding: 0;
+    }
+
+    /* Outlook */
+    img {
+      -ms-interpolation-mode: bicubic;
+      display: block;
+      outline: none;
+      text-decoration: none;
+    }
+
+    /* IExplorer */
+    body,
+    table,
+    td,
+    p,
+    a,
+    li,
+    blockquote {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-weight: normal !important;
+    }
+
+    .ExternalClass td[class="ecxflexibleContainerBox"] h3 {
+      padding-top: 10px !important;
+    }
+
+    /* hotmail */
+    /* email template styles */
+    h1 {
+      display: block;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 100%;
+    }
+
+    h2 {
+      display: block;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 120%;
+    }
+
+    h3 {
+      display: block;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 110%;
+    }
+
+    h4 {
+      display: block;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: normal;
+      line-height: 100%;
+    }
+
+    .flexibleImage {
+      height: auto;
+    }
+
+    table[class=flexibleContainerCellDivider] {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    body,
+    #bodyTbl {
+      background-color: #E1E1E1;
+    }
+
+    #emailHeader {
+      background-color: #E1E1E1;
+    }
+
+    #emailBody {
+      background-color: #FFFFFF;
+    }
+
+    #emailFooter {
+      background-color: #E1E1E1;
+    }
+
+    .textContent {
+      color: #8B8B8B;
+      font-family: Helvetica;
+      font-size: 16px;
+      line-height: 125%;
+      text-align: Left;
+    }
+
+    .textContent a {
+      color: #205478;
+      text-decoration: underline;
+    }
+
+    .emailButton {
+      background-color: #205478;
+      border-collapse: separate;
+    }
+
+    .buttonContent {
+      color: #FFFFFF;
+      font-family: Helvetica;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 100%;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .buttonContent a {
+      color: #FFFFFF;
+      display: block;
+      text-decoration: none !important;
+      border: 0 !important;
+    }
+
+    #invisibleIntroduction {
+      display: none;
+      display: none !important;
+    }
+
+    /* hide the introduction text */
+    /* other framework hacks and overrides */
+    span[class=ios-color-hack] a {
+      color: #275100 !important;
+      text-decoration: none !important;
+    }
+
+    /* Remove all link colors in IOS (below are duplicates based on the color preference) */
+    span[class=ios-color-hack2] a {
+      color: #205478 !important;
+      text-decoration: none !important;
+    }
+
+    span[class=ios-color-hack3] a {
+      color: #8B8B8B !important;
+      text-decoration: none !important;
+    }
+
+    /* phones and sms */
+    .a[href^="tel"],
+    a[href^="sms"] {
+      text-decoration: none !important;
+      color: #606060 !important;
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    .mobile_link a[href^="tel"],
+    .mobile_link a[href^="sms"] {
+      text-decoration: none !important;
+      color: #606060 !important;
+      pointer-events: auto !important;
+      cursor: default !important;
+    }
+
+    /* responsive styles */
+    @media only screen and (max-width: 480px) {
+      body {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
+      table[id="emailHeader"],
+      table[id="emailBody"],
+      table[id="emailFooter"],
+      table[class="flexibleContainer"] {
+        width: 100% !important;
+      }
+
+      td[class="flexibleContainerBox"],
+      td[class="flexibleContainerBox"] table {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+
+      td[class="imageContent"] img {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      img[class="flexibleImage"] {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      img[class="flexibleImageSmall"] {
+        height: auto !important;
+        width: auto !important;
+      }
+
+      table[class="flexibleContainerBoxNext"] {
+        padding-top: 10px !important;
+      }
+
+      table[class="emailButton"] {
+        width: 100% !important;
+      }
+
+      td[class="buttonContent"] {
+        padding: 0 !important;
+      }
+
+      td[class="buttonContent"] a {
+        padding: 15px !important;
+      }
+    }
+  </style>
+  <!--
+      MS Outlook custom styles
+    -->
+  <!--[if mso 12]>
+      <style type="text/css">
+        .flexibleContainer{display:block !important; width:100% !important;}
+      </style>
+    <![endif]-->
+  <!--[if mso 14]>
+      <style type="text/css">
+        .flexibleContainer{display:block !important; width:100% !important;}
+      </style>
+    <![endif]-->
+</head>
+
+<body bgcolor="#E1E1E1" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center style="background-color:#E1E1E1;">
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTbl" style="table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;">
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+
+          <table bgcolor="#E1E1E1" border="0" cellpadding="0" cellspacing="0" width="500" id="emailHeader">
+            <tr>
+              <td align="center" valign="top">
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+
+                      <table border="0" cellpadding="10" cellspacing="0" width="500" class="flexibleContainer">
+                        <tr>
+                          <td valign="top" width="500" class="flexibleContainerCell">
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="left" valign="middle" id="invisibleIntroduction" class="flexibleContainerBox" style="display:none;display:none !important;">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:100%;">
+                                    <tr>
+                                      <td align="left" class="textContent">
+                                        <div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
+                                          Here you can put short introduction of your email template.
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+
+          <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="500" id="emailBody">
+
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="color:#FFFFFF;" bgcolor="#2E7D32">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                        <tr>
+                          <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                            <table border="0" cellpadding="30" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="center" valign="top" class="textContent">
+                                  <h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">{{organizationName}} New Assignment</h1>
+                                  <h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#C9BC20;line-height:135%;">{{projectName}}</h2>
+                                  <div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">You have been assigned a {{taskType}} </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                        <tr>
+                          <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                            <table border="0" cellpadding="30" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="center" valign="top">
+
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td valign="top" class="textContent">
+                                        <h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">{{assignmentName}}</h3>
+                                        <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">A new {{taskType}} has been assigned to you for the {{projectName}} project.{{#if dueDate }}Please ensure the assigned task is completed by {{dueDate}} {{/if}}</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#F8F8F8">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                        <tr>
+                          <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                            <table border="0" cellpadding="30" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="center" valign="top">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #2E7D32;">
+                                    <tr>
+                                      <td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
+                                        <a style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="{{link}}" target="_blank">{{linkText}}</a>
+                                      </td>
+                                    </tr>
+                                  </table>
+
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+          </table>
+
+          <!-- footer -->
+          <table bgcolor="#E1E1E1" border="0" cellpadding="0" cellspacing="0" width="500" id="emailFooter">
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                        <tr>
+                          <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                            
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- // end of footer -->
+
+        </td>
+      </tr>
+    </table>
+  </center>
 </body>
+
 </html>`
 var dataTableThree = `
 <!DOCTYPE html>
