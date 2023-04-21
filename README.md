@@ -45,4 +45,4 @@
 2. Since there is no way to add an image to an email notification that isn't a link to the image source, be ware of using links from the internet within HTML "a" (anchor) tags. 
     - Links often change, break or are removed by their creators and will not render if this occurs.
 ## Contact:
-     For assistance, general inquiries, or findings relating to this tool, email/ping ryan.logan@navex.com.
+      ryan.logan@navex.com.
