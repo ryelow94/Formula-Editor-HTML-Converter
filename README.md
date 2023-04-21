@@ -3,7 +3,7 @@
 ## Description 
 - This app simplifies and streamlines the process of creating HTML code for use within NAVEX IRM. 
 - It also converts HTML code into a C# string that can be used within the NAVEX IRM Formula Engine to render HTML in a record. This helps to mitigate the time and difficulity one experiences while adding HTML and CSS into a formula. As a result, more detailed and rich HTML can be implemented within IRM.
-- HTML files can also be imported into the app and copy/pasted into the RTF for editing and previewing.
+- HTML files can also be imported into the app and copy/pasted into the Rich Text editor for editing and previewing.
 - This app can also be used to create HTML templates for email notifications sent from IRM to it's users. 
 - The Rich Text Editor within the app includes many useful tools for editing HTML and CSS without needing very much knowledge of their syntax. 
     - For example, you can insert tables, links and lists, as well as edit spacing, alignment, font and more without writing any code.  
