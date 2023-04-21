@@ -44,7 +44,6 @@
     - It's a good idea to test any template by emailing it to yourself before suggesting it for customer use.
 2. Since there is no way to add an image to an email notification that isn't a link to the image source, be ware of using links from the internet within HTML "a" (anchor) tags. 
     - Links often change, break or are removed by their creators and will not render if this occurs.
-## Support: 
-    - Using this tool will often require a certain amount of HTML/CSS knowledge. Should you encounter any difficulty or have any questions, feel free to reach out to the contact below.
+    - Using this tool in certain use cases may require knowledge of HTML/CSS. Feel free to reach out to the below contact with any questions/concerns.
 ## Contact:
       ryan.logan@navex.com
