@@ -26,10 +26,10 @@
 ## Usage: 
 1. Select an HTML template from the cards and a C# string will be generated and copied to your clipboard. 
 2. You will then be presented with an option to clear the string and start over, or copy the HTML to paste within the Rich Text Editor for editing. 
-    - If you do not select a template, you can import an HTML file from your computer and press submit on the form below the text editor (note: you will need to choose an alias name to continue. This will be the reference to the field in IRM that will be rendering the HTML via the formula engine.) 
-    - If you do not select a template or import an HTML file, you can simply write HTML code in the source tool of the Rich Text Editor/create HTML via the available tools (This would be similar to using Microsoft Word). 
+    - If you do not select a template, you can import an HTML file from your computer, paste it into the Rich Text editor, and press submit on the form below the text editor (note: you will want to populate the alias of the IRM field that the code will be added to. This will be the reference to the field in IRM that will be rendering the HTML via the formula engine.) 
+    - If you do not select a template or import an HTML file, you can simply write HTML code in the source tool of the Rich Text Editor/create HTML via the available tools (This will be similar to using the IRM Rich Text Editor). 
     - Clearing the form using the red "Clear Form" button clears the alias value, but only clears the editor if the source tool is open. 
-        - You can press the "New Page" icon in the text editor toolbar to clear it otherwise. 
+        - You can press the "New Page" icon in the text editor toolbar to clear it otherwise. The icon appears as a blank page. 
 - For any questions relating to the functionality of the Rich Text Editor, you can select the "?" icon in the toolbar to see documentation relating to the "CKeditor." 
 - Finally, you can add template variables (surrounded by [ ]) to any text area within the HTML to pull the data from other IRM fields within an instance. 
     - Just be sure to know that date/time fields will need to be converted to a string element if you intend to use one within the C# string. 
@@ -42,5 +42,6 @@
     - Be sure to reference supported elements/attributes for both IRM and major email providers to ensure consistency throughout. 
     - For example, CSS drop shadows and transitions are not supported by Microsoft Outlook even though they may render in IRM. 
     - It's a good idea to test any template by emailing it to yourself before suggesting it for customer use.
-2. Since there is no way to add an image to an email notification that isn't a link to the image source, be ware of using links from the internet with HTML "a" tags. 
+2. Since there is no way to add an image to an email notification that isn't a link to the image source, be ware of using links from the internet within HTML "a" (anchor) tags. 
     - Links often change, break or are removed by their creators and will not render if this occurs.
+    - For assistance, general inquiries, or findings relating to this tool, email/ping ryan.logan@navex.com.
