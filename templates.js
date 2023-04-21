@@ -1597,7 +1597,7 @@ var niceTable = `
 </body>
 </html>
 `
-templates.push(vendorAssessment, cancelled, dataTable, dataTableTwo, dataTableThree, dataTableFour, basicEmail, niceTable)
+templates.push(vendorAssessment, cancelled, dataTable, dataTableTwo, dataTableThree, dataTableFour, basicEmail, niceTable, )
 
 var copyHTML = document.getElementById("copyHTML")
 var copyCsharp = document.getElementById("copyCsharp")
@@ -1658,6 +1658,7 @@ function copyTemplate() {
     display = templates[7]
 
   }
+  
 
   handleSubmit2()
 

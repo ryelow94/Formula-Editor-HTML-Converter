@@ -1,88 +1,205 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+<html>
+
 <head>
-<meta name="viewport" content="width=device-width" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Title</title>
+  <style>
+    .button {
+      background-color: rgb(61, 112, 253);
+      /* SLB BLue */
 
-
-<style type="text/css">
-img {
-max-width: 100%;
-}
-body {
--webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em;
-}
-body {
-background-color: #f6f6f6;
-}
-@media only screen and (max-width: 640px) {
-  body {
-    padding: 0 !important;
-  }
-  h1 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h2 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h3 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h4 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h1 {
-    font-size: 22px !important;
-  }
-  h2 {
-    font-size: 18px !important;
-  }
-  h3 {
-    font-size: 16px !important;
-  }
-  .container {
-    padding: 0 !important; width: 100% !important;
-  }
-  .content {
-    padding: 0 !important;
-  }
-  .content-wrap {
-    padding: 10px !important;
-  }
-  .invoice {
-    width: 100% !important;
-  }
-}
-</style>
+      color: #ecf0f1;
+      width: 100%;
+    }
+    .button:hover{
+      cursor:pointer;
+      background-color: #3745dc;;
+    }
+  </style>
 </head>
 
-<body itemscope itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6">
+<body>
+  <div style="background-color: aliceblue; border: solid black 1px;">
+  <p style="text-align: center;">&nbsp;</p>
 
-<table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
-		<td class="container" width="600" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;" valign="top">
-			<div class="content" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
-				<table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background-color: #fff; margin: 0; border: 1px solid #e9e9e9;" bgcolor="#fff"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="alert alert-warning" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #fff; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; background-color: #FF9F00; margin: 0; padding: 20px;" align="center" bgcolor="#FF9F00" valign="top">
-							Header Text
-						</td>
-					</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
-							<table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
-										Lorem <strong style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">Ipsum</strong> Dolor.
-									</td>
-								</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
-										Body Text for the email template
-									</td>
-								</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
-										<a href="http://www.mailgun.com" class="btn-primary" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background-color: #348eda; margin: 0; border-color: #348eda; border-style: solid; border-width: 10px 20px;">Button Link</a>
-									</td>
-								</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
-										Closing Text
-									</td>
-								</tr></table></td>
-					</tr></table><div class="footer" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;">
-					<table width="100%" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="aligncenter content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #999; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"></td>
-						</tr></table></div></div>
-		</td>
-		<td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
-	</tr></table></body>
+  <p style="text-align: center;"><span style="color: rgb(61, 112, 253); font-size: 28px;"><strong>IRM Risk
+        Dashboards</strong></span></p>
+
+  <p>&nbsp;</p>
+
+  <p style="text-align: center;">&nbsp;</p>
+
+  <p style="text-align: center;"><em><span style="font-size: 16px;">Please click any title below to access the target
+        dashboard.</span></em></p>
+      </div>
+
+ 
+
+
+  <table style="border-collapse: collapse; width: 100%; " border="1">
+
+    <tbody>
+
+      <tr style="background-color: #a9aab7;" >
+
+        <td style=" ">
+
+          <h2 style="text-align: center;">IRM Risk Register</h2>
+
+        </td>
+
+        <td style="width: 25%; ">
+
+          <h2 style="text-align: center;">Risk Dashboards By Domain</h2>
+
+        </td>
+
+        <td style="width: 25%; height: 84px;">
+
+          <h2 style="text-align: center;">CSRM Program</h2>
+
+        </td>
+
+        <td style="width: 25%; height: 84px;">
+
+          <h2 style="text-align: center;">Risk By Initiative</h2>
+
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <table style="width: 100%; ">
+
+    <tbody>
+
+      <tr class="option" style="height: 24px;">
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""><button class="button"><span style="font-size: 16px;">Full Risk
+                    Register Content</span></button></a></span></p>
+
+        </td>
+
+        <td style="">
+
+          <p><span style="font-size: 16px;"><a href=""><button class="button"><span style="font-size: 16px;">Cyber
+                    Security Group</span></button> </a></span></p>
+
+        </td>
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""><button class="button"><span style="font-size: 16px;">2023 CSRM
+                    Dashboard</span></button> </a></span></p>
+
+        </td>
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""><button class="button"><span style="font-size: 16px;">Zero
+                    Trust</span></button> </a></span></p>
+
+        </td>
+
+      </tr>
+
+      <tr style="height: 24px;">
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""> <button class="button"><span style="font-size: 16px;">Top Cyber
+                    Risks</span></button></a></span></p>
+
+        </td>
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""> <button class="button"><span style="font-size: 16px;">Digital
+                    &amp; Integration</span></button></a></span></p>
+
+        </td>
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""><button class="button"><span style="font-size: 16px;">2022 CSRM
+                    Dashboard</span></button> </a></span></p>
+
+        </td>
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""> <button class="button"><span style="font-size: 16px;">NIST CSF
+                    Compliance</span></button></a></span></p>
+
+        </td>
+
+      </tr>
+
+      <tr style="height: 24px;">
+
+        <td style="width: 25%; height: 24px;">&nbsp;</td>
+
+        <td style="width: 25%; height: 24px;"><span style="font-size: 16px;"><a href=""> <button class="button"><span
+                  style="font-size: 16px;">Digital Technology</span></button> </a></span></td>
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""><button class="button"><span style="font-size: 16px;">2021 CSRM
+                    Dashboard</span></button> </a></span></p>
+
+        </td>
+
+        <td style="width: 25%; height: 24px;"><span style="font-size: 16px;"><a href=""> <button class="button"><span
+                  style="font-size: 16px;">OT &amp; ICS Security</span></button> </a></span></td>
+
+      </tr>
+
+      <tr style="height: 24px;">
+
+        <td style="width: 25%; height: 24px;">&nbsp;</td>
+
+        <td style="width: 25%; height: 24px;"><span style="font-size: 16px;"><a href=""> <button class="button"><span
+                  style="font-size: 16px;">IT Digital Operations</span> </button> </a></span></td>
+
+        <td style="width: 25%; height: 24px;">
+
+          <p><span style="font-size: 16px;"><a href=""> <button class="button"><span style="font-size: 16px;">2020 CSRM
+                    Dashboard</span></button> </a></span></p>
+
+        </td>
+
+        <td style="width: 25%; height: 24px;"><span style="font-size: 16px;"><a href=""> <button class="button"><span
+                  style="font-size: 16px;">Fit For Basin</span></button> </a></span></td>
+
+      </tr>
+
+      <tr style="height: 24px;">
+
+        <td style="width: 25%; height: 24px;">&nbsp;</td>
+
+        <td style="width: 25%; height: 24px;"><span style="font-size: 16px;"><a href=""> <button class="button"><span
+                  style="font-size: 16px;">IT Digital Enterprise Systems</span> </button> </a></span></td>
+
+      </tr>
+
+      <tr style="height: 24px;">
+
+        <td style="width: 25%; height: 24px;">&nbsp;</td>
+
+        <td style="width: 25%; height: 24px;"><span style="font-size: 16px;"><a href=""> <button class="button"><span
+                  style="font-size: 16px;">IT Data &amp; Analytics</span> </button> </a></span></td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+
+
+</body>
+
 </html>

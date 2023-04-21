@@ -167,69 +167,71 @@ a.ex2:visited, a.ex2:link
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center; cursor:pointer"><span style="font-size: 12px;"> <a class="ex1" href=""><strong>RISK</strong></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="ex1" href=""><strong> AUDIT</strong></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="ex1" href=""><strong> INCIDENT</strong></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="ex1" href=""><strong> THIRD PARTY</strong></a></p>
 </body></html>`
-async function copyBlock () {
-    console.log(select.value)
-    // console.log(buttonWithLink)
-    switch(select.value) {
-        case "Header":
-       await navigator.clipboard.writeText(header); 
-       var copiedBlock = document.createElement("p")
-       copiedBlock.style = "text-align:center; color:green"
-       copiedBlock.textContent = "---Copied Header Block---"
-       form2.after(copiedBlock)
-       setTimeout(() => {
+
+async function copyBlock() {
+  console.log(select.value)
+  // console.log(buttonWithLink)
+  switch (select.value) {
+    case "Header":
+      await navigator.clipboard.writeText(header);
+      var copiedBlock = document.createElement("p")
+      copiedBlock.style = "text-align:center; color:green"
+      copiedBlock.textContent = "---Copied Header Block---"
+      form2.after(copiedBlock)
+      setTimeout(() => {
         copiedBlock.remove()
       }, "5000");
-          break;
-        case "Table":
-       await navigator.clipboard.writeText(table); 
-       var copiedBlock = document.createElement("p")
-       copiedBlock.style = "text-align:center; color:green"  
-       copiedBlock.textContent = "---Copied Table Block---"
-       form2.after(copiedBlock)
-       setTimeout(() => {
+      break;
+    case "Table":
+      await navigator.clipboard.writeText(table);
+      var copiedBlock = document.createElement("p")
+      copiedBlock.style = "text-align:center; color:green"
+      copiedBlock.textContent = "---Copied Table Block---"
+      form2.after(copiedBlock)
+      setTimeout(() => {
         copiedBlock.remove()
       }, "5000");
-          break; 
-          case "Text with Title":
-       await navigator.clipboard.writeText(titleAndText); 
-       var copiedBlock = document.createElement("p")
-       copiedBlock.style = "text-align:center; color:green"  
-       copiedBlock.textContent = "---Copied Container Block---"
-       form2.after(copiedBlock)
-       setTimeout(() => {
+      break;
+    case "Text with Title":
+      await navigator.clipboard.writeText(titleAndText);
+      var copiedBlock = document.createElement("p")
+      copiedBlock.style = "text-align:center; color:green"
+      copiedBlock.textContent = "---Copied Container Block---"
+      form2.after(copiedBlock)
+      setTimeout(() => {
         copiedBlock.remove()
       }, "5000");
-      break; 
-      case "Button":
-   await navigator.clipboard.writeText(buttonWithLink); 
-   var copiedBlock = document.createElement("p")
-   copiedBlock.style = "text-align:center; color:green"  
-   copiedBlock.textContent = "---Copied Button Block---"
-   form2.after(copiedBlock)
-   setTimeout(() => {
-    copiedBlock.remove()
-  }, "5000");
-  break;
-  case "Button 2":
-  await navigator.clipboard.writeText(buttonWithLink2); 
-  var copiedBlock = document.createElement("p")
-  copiedBlock.style = "text-align:center; color:green"  
-  copiedBlock.textContent = "---Copied Button 2 Block---"
-  form2.after(copiedBlock)
-  setTimeout(() => {
-   copiedBlock.remove()
- }, "5000");
- break;
- case "Dashboard Links":
-  await navigator.clipboard.writeText(dashboardLinks); 
-  var copiedBlock = document.createElement("p")
-  copiedBlock.style = "text-align:center; color:green"  
-  copiedBlock.textContent = "---Copied Dashboard Links Block---"
-  form2.after(copiedBlock)
-  setTimeout(() => {
-   copiedBlock.remove()
- }, "5000");
-        default:     
-      }
+      break;
+    case "Button":
+      await navigator.clipboard.writeText(buttonWithLink);
+      var copiedBlock = document.createElement("p")
+      copiedBlock.style = "text-align:center; color:green"
+      copiedBlock.textContent = "---Copied Button Block---"
+      form2.after(copiedBlock)
+      setTimeout(() => {
+        copiedBlock.remove()
+      }, "5000");
+      break;
+    case "Button 2":
+      await navigator.clipboard.writeText(buttonWithLink2);
+      var copiedBlock = document.createElement("p")
+      copiedBlock.style = "text-align:center; color:green"
+      copiedBlock.textContent = "---Copied Button 2 Block---"
+      form2.after(copiedBlock)
+      setTimeout(() => {
+        copiedBlock.remove()
+      }, "5000");
+      break;
+    case "Dashboard Links":
+      await navigator.clipboard.writeText(dashboardLinks);
+      var copiedBlock = document.createElement("p")
+      copiedBlock.style = "text-align:center; color:green"
+      copiedBlock.textContent = "---Copied Dashboard Links Block---"
+      form2.after(copiedBlock)
+      setTimeout(() => {
+        copiedBlock.remove()
+      }, "5000");
+      break;
+    default:
+  }
 }
