@@ -59,7 +59,7 @@ var vendorAssessment = `<table role="presentation" id="emailNotification" style=
                       <p id="mainText2" class="mainText2" style="color: rgb(0, 0, 0);">
                         An Assessment has been issued to [VendorName]
                         with you as the contact. The assessment is
-                        designed to hel us meet and maintain
+                        designed to help us meet and maintain
                         compliance to industry regulations and
                         security expectations.
                       </p>
@@ -1070,7 +1070,7 @@ var dataTableTwo = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "ht
                                   <table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #2E7D32;">
                                     <tr>
                                       <td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
-                                        <span style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%; cursor: pointer; target="_blank">Click here to complete [AssessmentUrl]</span>
+                                        <span style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%; cursor: pointer;" target="_blank">Click here to complete [AssessmentUrl]</span>
                                       </td>
                                     </tr>
                                   </table>
@@ -1621,6 +1621,7 @@ function copyTemplate() {
   var copied = document.createElement("p")
   copied.setAttribute("id", "copied")
   copied.style = "color:green; font-size:40px; text-align:center"
+  alert("C# String Copied, to Copy HTML click the 'Copy HTML' button below")
   copied.textContent = "--- C# String copied ---"
   copyHTML.before(copied)
   if (document.getElementById("copied1")) {
@@ -1738,7 +1739,7 @@ function handleSubmit2() {
     const element = newString[i];
     stringArr.push(element)
   }
-  var cSharpArray = stringArr.join("").match(/.{0,10}/g) || []
+  var cSharpArray = stringArr.join("").match(/.{0,30}/g) || []
   let cSharpString = ""
   for (let i = 0; i < cSharpArray.length; i++) {
     const element = cSharpArray[i];

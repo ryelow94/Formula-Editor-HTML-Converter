@@ -146,7 +146,7 @@ function clearForm(){
       const element = newString[i];
       stringArr.push(element)
     }
-    var cSharpArray = stringArr.join("").match(/.{0,10}/g) || []
+    var cSharpArray = stringArr.join("").match(/.{0,30}/g) || []
     let cSharpString = ""
     for (let i = 0; i < cSharpArray.length; i++) {
       const element = cSharpArray[i];
